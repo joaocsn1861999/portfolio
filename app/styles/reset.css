@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #333;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+button:focus, a:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+button:active, a:active {
+    outline: none;
+    box-shadow: none;
+    user-select: none;
+}
+
+input, textarea, select {
+    font: inherit;
+    border: none;
+    outline: none;
+}
+
+button, input[type="button"], input[type="submit"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}

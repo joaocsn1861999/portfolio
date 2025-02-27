@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Portfolio - João Carlos </title>
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles/cabecalho.css" />
+    <link rel="stylesheet" href="./styles/apresentacao.css" />
+    <link rel="stylesheet" href="./styles/projetos.css" />
+    <link rel="stylesheet" href="./styles/navegador.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
+  <body>
+    <div id="container" class="container d-flex">
+        <header class="cabecalho d-flex" id="cabecalho">
+          <section class="secao secao--perfil d-flex">
+            <picture class="foto d-flex">
+              <img src="../assets/images/jc.jpg" alt="Foto de perfil">
+            </picture>
+            <div class="informacoes">
+              <h2 class="titulo"> João Carlos </h2>
+              <p class="informacao"> Desenvolvedor Front-end </p>
+              <p class="informacao"> Ceará - Brasil </p>
+              <div class="links d-flex">
+                <a href="https://github.com/joaocsn1861999" target="_blank" class="link d-flex">
+                  <img src="../assets/images/github.png" alt="Logo do GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/joaocsn1861999/" target="_blank" class="link d-flex">
+                  <img src="../assets/images/linkedin.png" alt="Logo do LinkedIn">
+                </a>
+              </div>
+            </div>
+          </section>
+          <section class="secao">
+            <h3 class="titulo"> Contato </h3>
+            <p class="informacao"> Email: joaocsnprofissional@gmail.com </p>
+          </section>
+          <section class="secao">
+            <h3 class="titulo"> Endereço </h3>
+            <p class="informacao"> Ceará - Brasil </p>
+          </section>
+          <section class="secao">
+            <h3 class="titulo"> Formação </h3>
+            <p class="informacao"> Análise e desenvolvimento de sistemas </p>
+            <p class="detalhes"> Centro Universitário Leonardo da Vinci - Uniasselvi </p>
+            <p class="detalhes"> 2023 - 2025 </p>
+            <p class="detalhes"> Cursando </p>
+          </section>
+          <section class="secao">
+            <h3 class="titulo"> Idiomas </h3>
+            <p class="informacao"> Inglês </p>
+            <p class="detalhes"> Intermediário </p>
+          </section>
+          <section class="secao">
+            <h3 class="titulo"> Técnologias </h3>
+            <p class="informacao"> HTML 5 </p>
+            <p class="informacao"> CSS 3 </p>
+            <p class="informacao"> JavaScript </p>
+            <p class="informacao"> TypeScript </p>
+            <p class="informacao"> Angular Framework 17 </p>
+            <p class="informacao"> Git e GitHub </p>
+          </section>
+          <button id="botaoBaixarCV" class="baixarCV d-flex" type="button">
+            BAIXAR CV 
+            <i class="fa-regular fa-circle-down"></i>
+          </button>
+        </header>
+        <main class="principal" id="principal">
+          <div class="d-flex">
+            <section class="apresentacao" id="apresentacao">
+              <h1 class="titulo">
+                Me chamo João Carlos <br />
+                Sou desenvolvedor <span class="destaque"> Front-end </span>
+              </h1>
+              <p class="conteudo">
+                Atualmente  buscando uma oportunidade na área de desenvolvimento com uma base de conhecimento em HTML 5,
+                CSS 3, JavaScript, Typescript, Angular Framework, Git e GitHub.
+              </p>
+              <div class="botao-container d-flex">
+                <button type="button" id="botaoContato" class="botao"> Entre em contato </button>
+              </div>
+            </section>
+  
+            <section class="projetos d-flex" id="projetos">
+              <h4 class="titulo"> Projetos </h4>
+              <div class="projetos-container">
+                <div class="projeto">
+                  <p class="aviso"> Em breve... </p>
+                </div>
+                <div class="projeto">
+                  <p class="aviso"> Em breve... </p>
+                </div>
+                <div class="projeto">
+                  <p class="aviso"> Em breve... </p>
+                </div>
+                <div class="projeto">
+                  <p class="aviso"> Em breve... </p>
+                </div>
+              </div>
+            </section>
+  
+            <section class="sobre" id="sobre">
+              <h4 class="titulo titulo--sobre"> Mais sobre mim </h4>
+              <p class="conteudo">
+                Profissional de TI desde 2020 como Supervisor de Suporte Técnico e Auxiliar Administrativo,
+                onde pude ao decorrer dos anos desenvolver habilidades como liderança, resolução de problemas,
+                comunicação assertiva, bom relacionamento interpessoal e capacidade de adaptação.
+                Atualmente  buscando uma oportunidade na área de desenvolvimento com uma base de conhecimento em HTML 5,
+                CSS 3, JavaScript, Typescript, Angular Framework, Git e GitHub.
+                Aprender e enfrentar novos desafios me mantém motivado,
+                por isso venho buscando cada vez mais conhecimento na área e
+                iniciei minha Graduação Tecnólga em Análise e Desenvolvimento de Sistemas no 2°(segundo) semestre de 2023.
+              </p>
+          </div>
+          </section>
+    
+        </main>
+         <nav id="navegador" class="navegador d-flex">
+          <a href="#cabecalho" class="botao d-flex">
+            <i class="fa-regular fa-user"></i>
+          </a>
+          <a href="#sobre" class="botao d-flex">
+            <i class="fa-regular fa-file-lines"></i>
+          </a>
+          <button id="botaoContato2" type="button" class="botao d-flex">
+            <i class="fa-regular fa-envelope"></i>
+          </button>
+          <button id="botaoAlternaTema" type="button" class="botao d-flex">
+            <i id="icone-luz" class="fa-regular fa-lightbulb esconder"></i>
+            <i id="icone-lua" class="fa-regular fa-moon"></i>
+          </button>
+          <button id="botaoTopo" type="button" class="botao d-flex esconder">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+         </nav>
+    </div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

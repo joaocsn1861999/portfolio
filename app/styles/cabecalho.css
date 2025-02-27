@@ -1,0 +1,206 @@
+.cabecalho {
+    background-color: var(--cor-background);
+    padding: .7em;
+    margin-inline: 1em;
+    margin-block: .5em;
+    border-radius: 12px 12px 0 0;
+    width: 90%;
+
+    .secao {
+        position: relative;
+        width: 100%;
+        margin-inline: .5em;
+        margin-block-end: .5em;
+        padding-block-end: .8em;
+
+        .titulo {
+            margin-inline-start: .75em;
+            font-size: .9rem;
+            font-weight: 700;
+        }
+        
+        .informacao {
+            margin-inline-start: 1.5em;
+            font-size: .7rem;
+            font-weight: 600;
+        }
+
+        .detalhes {
+            margin-inline-start: 1.5em;
+            opacity: .8;
+            font-size: .7rem;
+            font-weight: 400;
+        }
+    }
+
+    .secao::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 95%; 
+        height: 1px;
+        background-color: var(--cor-chumbo);
+        transform: translateX(-50%);
+    }
+    
+    .secao--perfil {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: end;
+        gap: .5em;
+        
+        .foto {
+            width: 80px;
+            height: 80px;
+
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+            }
+        }
+
+        .informacoes {
+            display: flex;
+            flex-direction: column;
+            .titulo, .informacao {
+                margin: 0;
+            }
+
+            .links {
+                width: 100%;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: .5em;
+
+                .link {
+                    background-color: #E5E5E5;
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 2px;
+                    cursor: pointer;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .baixarCV {
+        background-color: var(--cor-vermelho);
+        color: var(--cor-branco);
+        font-size: 1rem;
+        font-weight: 700;
+        position: relative;
+        flex-direction: row;
+        gap: .5em;
+        padding-inline: .3em;
+        padding-block: .15em;
+        margin-block: 1em;
+    }
+
+    .baixarCV:active {
+        background-color: var(--cor-branco);
+        color: var(--cor-vermelho);
+    }
+
+    .baixarCV::before,
+      .baixarCV::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        transition: transform 0.3s ease-in-out, opacity 0.3s;
+        opacity: 0;
+      }
+      
+      .baixarCV::before {
+        top: -5px;
+        left: -5px;
+        border-top: 2px solid var(--cor-vermelho);
+        border-left: 2px solid var(--cor-vermelho);
+        transform: scale(0);
+      }
+
+      .baixarCV::after {
+        bottom: -5px;
+        right: -5px;
+        border-bottom: 2px solid var(--cor-vermelho);
+        border-right: 2px solid var(--cor-vermelho);
+        transform: scale(0);
+      }
+      
+      .baixarCV:hover::before,
+      .baixarCV:hover::after {
+        transform: scale(1);
+        opacity: 1;
+      }
+}
+
+
+@media (min-width: 500px) and (max-width: 1024px) {
+    .cabecalho {
+        width: 200px;
+        margin-inline-end: 0;
+        border-radius: 12px 0 0 0;
+
+        .secao--perfil {
+            flex-direction: column;
+            align-items: center;
+
+            .informacoes {
+                width: 100%;
+                .titulo {
+                    text-align: center;
+                    margin-block-end: .5em;
+                }
+
+                .informacao, .links {
+                    margin-inline: 1em;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .cabecalho {
+        justify-content: start;
+        width: 250px;
+        height: 100%;
+        margin: 0;
+        border-radius: 12px 0 0 0;
+
+        .secao {
+    
+            .titulo {
+                font-size: 1rem;
+            }
+            
+            .informacao, .detalhes {
+                font-size: .8rem;
+            }
+        }
+
+        .secao--perfil {
+            flex-direction: column;
+            align-items: center;
+
+            .informacoes {
+                width: 100%;
+                .titulo {
+                    text-align: center;
+                    margin-block-end: .5em;
+                }
+
+                .informacao, .links {
+                    margin-inline: 1em;
+                }
+            }
+        }
+    }
+  }

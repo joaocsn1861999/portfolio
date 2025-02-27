@@ -1,0 +1,104 @@
+.principal {
+  .projetos {
+    background-color: var(--cor-background);
+    padding: 0.7em;
+    margin-inline: 1em;
+    margin-block: 0.5em;
+    width: 90%;
+
+    .titulo {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-block-end: 0.7em;
+    }
+
+    .projetos-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+
+      .projeto {
+        background-color: var(--cor-vermelho);
+        position: relative;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        opacity: .9;
+        cursor: pointer;
+        transition: opacity 0.5s ease;
+        
+        .aviso {
+          background-color: var(--cor-branco);
+          color: var(--cor-vermelho);
+          font-size: 1rem;
+          font-weight: 700;
+          text-align: center;
+          width: 150%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+          white-space: nowrap;
+          user-select: none;
+          transition: font-size 0.5s ease;
+        }
+      }
+
+      .projeto:hover {
+        opacity: 1;
+
+        .aviso {
+          font-size: 1.3rem;
+        }
+      }
+
+      .projeto:active {
+        background-color: var(--cor-branco);
+
+        .aviso {
+          background-color: var(--cor-vermelho);
+          color: var(--cor-branco);
+        }
+      }
+
+    }
+
+    .projetos-container:hover > :not(:hover) {
+      filter: blur(1px);
+      -webkit-filter: blur(1px);
+      opacity: .8;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .principal {
+    .projetos {
+  
+      .titulo {
+        font-size: 1.5rem;
+      }
+  
+      .projetos-container {
+        gap: 2em;
+        .projeto {
+          width: 250px;
+          height: 250px;
+  
+          .aviso {
+            font-size: 1.5rem;
+            font-weight: 700;
+          }
+        }
+
+        .projeto:hover {  
+          .aviso {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
