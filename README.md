@@ -9,7 +9,12 @@ Nesse desenvolvimento priorizei meus conhecimentos de boa práticas como TAGs se
 ## Design
 
 O design foi desenvolvido por mim mesmo no Figma, um esboço para que houvesse uma base para iniciar o desenvolvimento:
-https://www.figma.com/design/6YbKqoLf24P63LSyd0zscd/Portfolio---Jo%C3%A3o-Carlos?node-id=0-1&t=YEhDBtm9EG87KpMT-1
+* https://www.figma.com/design/6YbKqoLf24P63LSyd0zscd/Portfolio---Jo%C3%A3o-Carlos?node-id=0-1&t=YEhDBtm9EG87KpMT-1
+
+
+## Link para acessar
+
+* https://portfolio-black-three-83.vercel.app/app/index.html
 
 
 ## Tecnologias
