@@ -1,4 +1,12 @@
-class BaixarCurriculo {
+export default class BaixarCurriculo {
+  _btnBaixarCV = document.getElementById("botaoBaixarCV");
+
+  constructor(){
+    this._btnBaixarCV.addEventListener(
+      "click", () =>
+        this.baixar()
+    );
+  }
 
   baixar() {
     const link = document.createElement("a");
@@ -10,5 +18,3 @@ class BaixarCurriculo {
   }
 
 }
-
-export default new BaixarCurriculo();

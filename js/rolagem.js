@@ -1,6 +1,16 @@
-class Rolagem {
+export default class Rolagem {
+  _btnRolarAoTopo = document.getElementById("botaoTopo");
   _larguraTela = window.innerWidth;
   _containerPrincipal = document.getElementById("principal");
+
+  constructor(){
+    this.verificaRolagemParaBotao();
+    this._btnRolarAoTopo.addEventListener(
+      "click", () =>
+        this.irAoTopo()
+    );
+
+  }
 
   irAoTopo() {
     if ( this._larguraTela > 1024 ) {
@@ -10,28 +20,24 @@ class Rolagem {
     }
   }
 
-  verificaRolagemParaBotao(btnRolarAoTopo) {
-
+  verificaRolagemParaBotao() {
     if ( this._larguraTela > 1024 ) {
       this._containerPrincipal.addEventListener("scroll", () => {
         if (this._containerPrincipal.scrollTop > 150) {
-          btnRolarAoTopo.classList.remove("esconder");
+          this._btnRolarAoTopo.classList.remove("esconder");
         } else {
-          btnRolarAoTopo.classList.add("esconder");
+          this._btnRolarAoTopo.classList.add("esconder");
         }
       } )
     } else {
       window.addEventListener("scroll", () => {
         if (window.scrollY > 150) {
-          btnRolarAoTopo.classList.remove("esconder");
+          this._btnRolarAoTopo.classList.remove("esconder");
         } else {
-          btnRolarAoTopo.classList.add("esconder");
+          this._btnRolarAoTopo.classList.add("esconder");
         }
       });
     };
-    }
-
+  }
 
 }
-
-export default new Rolagem();
