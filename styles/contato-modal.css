@@ -1,0 +1,141 @@
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100dvh;
+  
+  #modal-sombra {
+    background-color: var(--cor-sombra-preta);
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .modal-container {
+    background-color: var(--cor-background);
+    position: absolute;
+    z-index: 2;    
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 85%;
+    min-height: 250px;
+    border-radius: 1px;
+
+    .formulario {
+      position: relative;
+      width: 100%;
+      gap: .5em;
+
+      .botao-fechar-modal {
+        background-color: var(--cor-fonte);
+        color: var(--cor-background);
+        font-size: 1rem ;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        border-radius: 50%;
+        border: none;
+      }
+
+      .titulo {
+        color: var(--cor-fonte);
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top: .5em;
+      }
+
+      .campo {
+        justify-content: left;
+        width: 90%;
+
+        label {
+          color: var(--cor-fonte);
+          font-size: .9rem;
+          font-weight: 500;
+          text-align: left;
+          width: 100%;
+        }
+
+        input, textarea {
+          width: 100%;
+          font-size: .8rem;
+          padding: .2em;
+          border: 1px solid var(--cor-fonte);
+          border-radius: 3px;
+          outline: none;
+        }
+      }
+    }
+  }
+  
+  .mensagem-modal {
+    width: 90%;
+    gap: 1em;
+    
+    .mensagem {
+      color: var(--cor-fonte);
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 1em;
+    }
+  }
+  
+  .botao {
+    background-color: var(--cor-vermelho);
+    color: var(--cor-branco);
+    font-size: .9rem;
+    font-weight: 600;
+    width: 5em;
+    height: 2em;
+    cursor: pointer;
+    border-radius: 1px;
+    border: 1px solid var(--cor-vermelho);
+    margin-bottom: .5em;
+  }
+
+  .botao:active {
+    background-color: var(--cor-branco);
+    color: var(--cor-vermelho);
+  }
+
+  .carregamento {
+    gap: 1em;
+    
+    .mensagem {
+      color: var(--cor-fonte);
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    .animacao {
+        border: 8px solid var(--cor-fonte);
+        border-top: 8px solid var(--cor-vermelho);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: giroCarregamento 1s linear infinite;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .modal-container {
+    max-width: 400px;
+    min-height: 300px;
+  }
+}
+
+@keyframes giroCarregamento {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
