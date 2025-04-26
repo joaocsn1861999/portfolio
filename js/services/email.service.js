@@ -1,5 +1,5 @@
 export default class EmailService {
-    _apiUrl = 'http://localhost:3000/api/v1/email/contato';
+    _apiUrl = 'https://portfolio-api-7qs0.onrender.com/api/v1/email/contato';
 
     async enviarContato(nome, email, mensagem) {
         const opcoes = {
